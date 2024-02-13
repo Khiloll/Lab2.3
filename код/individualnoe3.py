@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
 def insert_letter(word, letter_to_insert):
     for i, char in enumerate(word):
         if char == 'и':
