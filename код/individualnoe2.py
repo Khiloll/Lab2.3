@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
 def check_sequence(words_sequence):
     for word in words_sequence:
         if "жи" in word or "ши" in word:
