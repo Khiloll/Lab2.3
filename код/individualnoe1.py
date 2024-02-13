@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+
 def find_letters(sentence):
     result = [char for char in sentence if char in ['м', 'и', 'н']]
     return result
