@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+def count_letter_o(sentence):
+    count = 0
+    for letter in sentence:
+        if letter.lower() == 'о':  # Проверяем каждую букву, игнорируя регистр
+            count += 1
+    return count
 
-def find_letters(sentence):
-    result = [char for char in sentence if char in ['м', 'и', 'н']]
-    return result
+# Ввод предложения от пользователя
+sentence = input("Введите предложение: ")
 
-# Заданное предложение
-input_sentence = "Пример заданного предложения, содержащего буквы 'м', 'и', 'н'."
-
-# Вызываем функцию для поиска букв и выводим результат
-found_letters = find_letters(input_sentence)
-print("Найденные буквы: ", found_letters)
+# Вычисление числа букв 'о' в предложении
+letter_count = count_letter_o(sentence)
+print(f"Число букв 'о' в предложении: {letter_count}")

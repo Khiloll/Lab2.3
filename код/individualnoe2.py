@@ -2,15 +2,19 @@
 # -*- coding: utf-8 -*-
 
 
-def check_sequence(words_sequence):
-    for word in words_sequence:
-        if "жи" in word or "ши" in word:
-            print(f'Слово "{word}" правильно содержит буквосочетание "жи" или "ши"')
+def replace_even_chars(sentence):
+    modified_sentence = ""
+    for i in range(len(sentence)):
+        if i % 2 == 1:  # Проверяем индекс символа (четный индекс)
+            modified_sentence += 'ы'
         else:
-            print(f'Слово "{word}" не содержит буквосочетание "жи" или "ши"')
+            modified_sentence += sentence[i]
 
-# Заданная последовательность слов
-input_words_sequence = ["жираф", "мышь", "книга", "свижа"]
+    return modified_sentence
 
-# Вызываем функцию для проверки последовательности слов
-check_sequence(input_words_sequence)
+# Ввод предложения от пользователя
+sentence = input("Введите предложение: ")
+
+# Замена символов на четных позициях на 'ы'
+result_sentence = replace_even_chars(sentence)
+print(f"Предложение с замененными символами на четных позициях: {result_sentence}")
